@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ERROR_FailGetMusicInfo">预读音乐信息失败</string>
+    <string name="add_music_list">添加音乐列表</string>
+    <string name="music_local">本地音乐</string>
+    <string name="music_all">所有音乐</string>
+    <string name="music_favorite">最爱音乐</string>
+    <string name="mutil_select">批量选择</string>
+    <string name="music_list_name">音乐单名</string>
+    <string name="play_all">播放所有音乐</string>
+    <string name="my_list">我的歌单</string>
+    <string name="create_list">创建列表</string>
+    <string name="music_name">歌曲名</string>
+    <string name="my_music">我的音乐</string>
+    <string name="music_online">音乐库</string>
+    <string name="artist">歌手</string>
+    <string name="new_music_list_name">新音乐清单名</string>
+    <string name="creat_new_muisc_list">创建新音乐列表</string>
+    <string name="create">创建</string>
+    <string name="cancel">取消</string>
+    <string name="nolyrics_to_display">暂无歌词显示</string>
+    <string name="ERROR_failToContinue">当前列表已到尽头</string>
+    <string name="ERROR_FailToPrepareMusic">读取音乐发生错误</string>
+</resources>

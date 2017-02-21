@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#148b24"
+    android:fitsSystemWindows="true"
+    tools:context="com.shenstudio.musicplayer.MainActivity">
+
+    <!--顶部栏-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/home_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <RadioGroup
+            android:id="@+id/title_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/title_MyMusic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/my_music"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/title_MusicStore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/music_online"
+                android:textColor="#8fff"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+    </android.support.v7.widget.Toolbar>
+
+    <!--供换页的容器-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/home_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home_titlebar">
+
+    </android.support.v4.view.ViewPager>
+
+    <!--底部播放控制-->
+    <RelativeLayout
+        android:id="@+id/home_musicDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#b1ffffff"
+        android:fitsSystemWindows="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="#c4c2c2" />
+
+        <ImageView
+            android:id="@+id/iv_MusicImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="15dp"
+            android:src="@drawable/default_icon" />
+
+        <TextView
+            android:id="@+id/home_MusicTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/iv_MusicImg"
+            android:text="@string/music_name"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/home_MusicArtist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_MusicTitle"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_MusicImg"
+            android:text="@string/artist"
+            android:textColor="#88000000"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/home_music_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="15dp"
+            android:src="@drawable/music_next" />
+
+        <ImageView
+            android:id="@+id/home_music_playCon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="15dp"
+            android:layout_toLeftOf="@id/home_music_next"
+            android:src="@drawable/music_pause" />
+    </RelativeLayout>
+</RelativeLayout>

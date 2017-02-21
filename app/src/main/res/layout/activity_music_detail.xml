@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:weightSum="9"
+    tools:context="com.shenstudio.musicplayer.MusicDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fitsSystemWindows="true"
+        android:orientation="horizontal"
+        android:padding="25dp">
+
+        <ImageView
+            android:id="@+id/detail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/detail_MusicTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/music_name"
+            android:textColor="#eaeaea"
+            android:textSize="40sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:src="@drawable/detail_favorite" />
+    </LinearLayout>
+
+    <!--可变显示区域左右滑动来切换歌词，封面和歌单-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/detail_container"
+        android:layout_width="match_parent"
+        android:overScrollMode="never"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+        <!--<ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:src="@drawable/detail_defaulticon" />-->
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/dot"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <!--播放顺序控制区-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/round_all" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/more" />
+    </LinearLayout>
+    <!--播放控制区-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/music_next" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:layout_weight="1.2"
+            android:src="@drawable/music_play" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/music_next" />
+    </LinearLayout>
+
+    <!--进度显示-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <android.support.v7.widget.AppCompatSeekBar
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:thumb="@null" />
+    </LinearLayout>
+</LinearLayout>
